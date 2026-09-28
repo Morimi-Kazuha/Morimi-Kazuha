@@ -1,0 +1,10 @@
+node_modules/
+.npm-cache/
+.wrangler/
+.wrangler-config/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+counter/wrangler.jsonc
+counter/preview/

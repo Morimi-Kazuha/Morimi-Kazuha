@@ -1,0 +1,20 @@
+{
+  "name": "morimi-pokemon-counter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:sprites": "node scripts/prepare-sprites.mjs",
+    "preview": "node scripts/render-preview.mjs",
+    "test": "node --test src/*.test.js",
+    "predb:local": "node scripts/ensure-local-config.mjs",
+    "db:local": "wrangler d1 migrations apply profile-visitor-counter --local",
+    "predev": "node scripts/ensure-local-config.mjs",
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "@xmldom/xmldom": "0.9.12",
+    "wrangler": "4.142.0"
+  }
+}
