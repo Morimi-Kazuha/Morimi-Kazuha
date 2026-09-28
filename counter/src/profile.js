@@ -10,6 +10,6 @@ export function renderProfileSvg(count, offset = 0) {
   <style>${GREETING_CSS}</style>
   <g transform="translate(40 40) scale(0.9)" fill="#0878d4" shape-rendering="crispEdges">${GREETING_ART}</g>
   <text x="45" y="140" fill="#24292f" font-family="Arial, sans-serif" font-size="27">学习中...</text>
-  <g transform="translate(485 39) scale(0.9)">${counter}</g>
+  <g transform="translate(344 36) scale(1.08)">${counter}</g>
 </svg>`;
 }

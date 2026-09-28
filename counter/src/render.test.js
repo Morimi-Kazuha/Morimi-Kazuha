@@ -51,5 +51,5 @@ test('profile SVG contains a complete greeting and the dynamic nine-sprite count
   assert.equal(groups.filter((group) => group.hasAttribute('data-pokemon')).length, 9);
   assert.equal(groups.filter((group) => group.getAttribute('class') === 'greeting-char').length, "Hi ~ I'm Kazuha".length);
   assert.match(svg, /@keyframes greeting-pop/);
-  assert.match(svg, /translate\(485 39\) scale\(0\.9\)/);
+  assert.match(svg, /translate\(344 36\) scale\(1\.08\)/);
 });
