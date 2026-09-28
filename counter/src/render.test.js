@@ -46,9 +46,10 @@ test('profile SVG contains a complete greeting and the dynamic nine-sprite count
   assert.deepEqual(errors, []);
   assert.equal(document.documentElement.getAttribute('data-count'), '000981254');
   assert.match(document.documentElement.getAttribute('aria-label'), /Hi ~ I'm Kazuha/);
-  assert.match(document.getElementsByTagName('text')[0].textContent, /开发中/);
+  assert.match(document.getElementsByTagName('text')[0].textContent, /学习中/);
   const groups = [...document.getElementsByTagName('g')];
   assert.equal(groups.filter((group) => group.hasAttribute('data-pokemon')).length, 9);
-  assert.equal(groups.filter((group) => group.getAttribute('class') === 'char').length, "Hi ~ I'm Kazuha".length);
-  assert.doesNotMatch(svg, /opacity:\s*0|visibility:\s*hidden/);
+  assert.equal(groups.filter((group) => group.getAttribute('class') === 'greeting-char').length, "Hi ~ I'm Kazuha".length);
+  assert.match(svg, /@keyframes greeting-pop/);
+  assert.match(svg, /translate\(485 39\) scale\(0\.9\)/);
 });

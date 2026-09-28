@@ -15,7 +15,7 @@ npm run db:local
 npm run dev
 ```
 
-Open `http://127.0.0.1:8787/profile.svg` twice. The displayed count should increase by one. Run `npm run preview -- 2` to render static PNG snapshots in `preview/`; the argument is a preview value, not stored counter data. `npm run prepare:sprites` reproduces the embedded data URI module from the tracked PNGs. `node ../scripts/generate-typing.mjs` reproduces the static greeting art in both the standalone SVG and Worker module. Local Wrangler configuration is copied from `wrangler.example.jsonc` to the ignored `wrangler.jsonc` on first use.
+Open `http://127.0.0.1:8787/profile.svg` twice. The displayed count should increase by one. Run `npm run preview -- 2` to render static PNG snapshots in `preview/`; the argument is a preview value, not stored counter data. `npm run prepare:sprites` reproduces the embedded data URI module from the tracked PNGs. `node ../scripts/generate-typing.mjs` reproduces the animated greeting art in both the standalone SVG and Worker module. Local Wrangler configuration is copied from `wrangler.example.jsonc` to the ignored `wrangler.jsonc` on first use.
 
 ## Cloudflare deployment
 

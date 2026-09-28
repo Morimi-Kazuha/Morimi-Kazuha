@@ -48,7 +48,7 @@ test('profile endpoint increments the same stored count and renders the complete
   const svg = await response.text();
   assert.match(svg, /data-count="000000001"/);
   assert.match(svg, /Hi ~ I'm Kazuha/);
-  assert.match(svg, /开发中/);
+  assert.match(svg, /学习中/);
   assert.equal(env.updates, 1);
 });
 
