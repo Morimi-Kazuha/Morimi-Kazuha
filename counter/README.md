@@ -1,8 +1,8 @@
 # Pokémon profile counter
 
-This Worker returns one transparent animated SVG at `GET /counter.svg`. Each GET increments a persistent D1 row and displays the resulting count as nine digits above the nine Pokémon. HEAD does not increment. Values above `999999999` display as `999999999`.
+This Worker returns the complete profile composition at `GET /profile.svg` and a standalone Pokémon counter at `GET /counter.svg`. Each GET increments the same persistent D1 row and displays a nine-digit count. HEAD does not increment. Values above `999999999` display as `999999999`.
 
-Production endpoint: https://morimi-pokemon-counter.morimi-pokemon-counter.workers.dev/counter.svg
+Production profile endpoint: https://morimi-pokemon-counter.morimi-pokemon-counter.workers.dev/profile.svg
 
 ## Local verification
 
@@ -15,7 +15,7 @@ npm run db:local
 npm run dev
 ```
 
-Open `http://127.0.0.1:8787/counter.svg` twice. The displayed count should increase by one. Run `npm run preview -- 2` to render a static PNG snapshot to `preview/counter.png`; the argument is a preview value, not stored counter data. `npm run prepare:sprites` reproduces the embedded data URI module from the tracked PNGs. Local Wrangler configuration is copied from `wrangler.example.jsonc` to the ignored `wrangler.jsonc` on first use.
+Open `http://127.0.0.1:8787/profile.svg` twice. The displayed count should increase by one. Run `npm run preview -- 2` to render static PNG snapshots in `preview/`; the argument is a preview value, not stored counter data. `npm run prepare:sprites` reproduces the embedded data URI module from the tracked PNGs. `node ../scripts/generate-typing.mjs` reproduces the static greeting art in both the standalone SVG and Worker module. Local Wrangler configuration is copied from `wrangler.example.jsonc` to the ignored `wrangler.jsonc` on first use.
 
 ## Cloudflare deployment
 
